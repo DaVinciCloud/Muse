@@ -1,0 +1,15 @@
+# # # # #
+#
+# Create an OpenVPN Server on a VPS instance
+#
+# 1) One User per Server
+# 2) Create profiles for:
+#   a) Desktop (1x)
+#   b) Laptop (1x)
+#   c) iPhone (1x)
+#   d) Android (1x)
+#   d) Table (1x)
+# 3) Give access to all 5 devices at the same time
+# 4) Turn OFF Server before reaching bandwith CAP ( @ 90 % )
+#
+# # # # #
