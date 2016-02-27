@@ -13,3 +13,10 @@
 # 4) Turn OFF Server before reaching bandwith CAP ( @ 90 % )
 #
 # # # # #
+
+# DISABLE SSH ROOT ACCESS
+nano /etc/ssh/sshd_config
+# search for: #PermitRootLogin
+# and replace it with:
+PermitRootLogin no
+
