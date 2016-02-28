@@ -1,22 +1,55 @@
-# # # # #
+# # # # # Project AxisPi - PiShield VPN Access Point Wi-Fi Router
 #
 # Create an OpenVPN Server on a VPS instance
 #
-# 1) One User per Server
-# 2) Create profiles for:
-#   a) Desktop (1x)
-#   b) Laptop (1x)
-#   c) iPhone (1x)
-#   d) Android (1x)
-#   d) Table (1x)
+# Links:
+#    https://github.com/Nyr/openvpn-install
+#    http://safesrv.net/disable-logging-in-openvpn-pptp-and-l2tp/
+#
+# 1) Setup One User per Server
+#    a) Setup user Name as: PiShield-[+{Date:Year.Month}+{Time:24H}] / PiShield-16122300
+#    b) Setup user Password randomly: Min 8 Characters Long
+# 2) Create "Optional" profiles, each one with different password ( for security ) 
+#    a) Desktop ( dt16122300 ) 
+#    b) Laptop  ( lt16122300 )
+#    c) iPhone  ( ip16122300 )
+#    d) Android ( ad16122300 )
+#    d) Table   ( tb16122300 )
 # 3) Give access to all 5 devices at the same time
-# 4) Turn OFF Server before reaching bandwith CAP ( @ 90 % )
+# 4) Bandwith CAP ( @ 90 % )
+#    a) Send Email to User about reaching CAP
+#    b) Send Email to Admin about reaching CAP
+#    c) Turn off Server to prevent extra charges
+# 5) Daily Usage
+#    a) Send Report to User about daily usage: to email and mobile
+#    b) Send Report to Admin about daily usage: to Main Email 
+# 6) 
 #
 # # # # #
 
-# DISABLE SSH ROOT ACCESS
-nano /etc/ssh/sshd_config
-# search for: #PermitRootLogin
-# and replace it with:
-PermitRootLogin no
+# # # # #
+# SECURITY - DISABLE SSH ROOT ACCESS
+# Open SSH Configuration File 
+#     nano /etc/ssh/sshd_config
+# Search for " # PermitRootLogin " and replace it with " PermitRootLogin no "
+# Restart server, try to connect with root over ssh to verify it is not allowed
+# # # # # 
+
+# # # # #
+# SECURITY - DISABLE LOGS 
+# http://safesrv.net/disable-logging-in-openvpn-pptp-and-l2tp/
+# In OpenVPN we need to add just add couple of lines to the server config file,
+# add below to your config file and restart the service:
+#   log /dev/null
+#   status /dev/null
+# Now restart OpenVPN:
+#   service openvpn restart
+#
+# LOCATION OF LOGS
+#   /var/log/syslog
+#   /var/log/openvpn.log
+#
+# # # # #
+
+
 
