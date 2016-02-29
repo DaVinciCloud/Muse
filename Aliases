@@ -8,7 +8,7 @@
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 
-# PLACE TO ADD EXTRA PATHS
+# PLACE TO ADD EXTRA PATH - http://goo.gl/mwwa9c
 #   /etc/profile ## All users except root
 #   PATH=$PATH:/data/myscripts  # ADD AT THE END OF FILE
 #   export PATH                 # ADD AT THE END OF FILE
