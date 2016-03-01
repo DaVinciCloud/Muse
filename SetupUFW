@@ -2,7 +2,8 @@
 
 #
 # OpenVPN Los Angeles Main
-#   IP:		45.32.64.117 
+#   IP:		45.32.64.117
+#   Host:	vultrlamain.axispi.com
 #   Proto:	1194 udp / 443 tcp
 #   This VPN Server only allows two similtaneous connections
 #
