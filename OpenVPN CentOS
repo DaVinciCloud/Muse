@@ -3,3 +3,5 @@ yum install cron
 yum install crond
 yum install crontab
 
+# Install WebMin
+#   http://blog.zwiegnet.com/linux-server/install-webmin-on-centos-6-4/
