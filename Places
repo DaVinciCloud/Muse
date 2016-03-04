@@ -2,31 +2,34 @@
 #   For Mint:   /etc/bash.bashrc
 #   For Ubunt:  ~/.bashrc
 
+# PLACE TO CREATE ALIAS FILE
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 
-# PLACE TO ADD EXTRA PATH - http://goo.gl/mwwa9c
-#   /etc/profile ## All users except root
-#   PATH=$PATH:/data/myscripts  # ADD AT THE END OF FILE
-#   export PATH                 # ADD AT THE END OF FILE
-
+# PLACE TO ADD EXTRA PATH
+# http://goo.gl/mwwa9c
+# /etc/profile ## All users except root
+# PATH=$PATH:/data/myscripts  # ADD AT THE END OF FILE
+# export PATH                 # ADD AT THE END OF FILE
 
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-#
 # Technical Services Personal ~/.bash_aliases file
-# 
+# My Personal aliases to improve work flow 
 
-alias myscripts='cd /usr/local/sbin; clear'
+alias myscripts='cd /usr/local/sbin; clear' 
   # This is the location of My Scripts
-  # by adding the my scripts here, I can excecute
+  # by adding my scripts here, I can excecute
   # from within any folder/location at the command prompt
 
 alias isinstalled='which'
-
+  # This allows you to check if a program is installed,
+  # and will show you its location.
+  # Run it by tapying isinstalled <NameOfProgram>
+  
 #  
 # Some Usefull aliases from the net - http://goo.gl/VubenI
 #
