@@ -95,5 +95,8 @@ alias chgrp='chgrp --preserve-root'
 ## Resume wget by default ##
 alias wget='wget -c'
 
+## Sublime Text Editor
+alias sublime='sudo sublime_text'
+
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
