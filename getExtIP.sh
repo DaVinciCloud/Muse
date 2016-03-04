@@ -1,6 +1,5 @@
 #/!/bin/bash
-
-# This command will obtain the external IP from the Active Interface
+# Get External IP
 clear
 echo "";
 echo -n "Your External IP: ";
