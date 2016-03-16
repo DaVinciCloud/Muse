@@ -68,10 +68,12 @@
 # You should have received a copy of the GNU Affero General Public
 # License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
-
-echo "#### Wi-Fi Pi Access Point and VPN Installation"
+clear
 echo "###################################################"
-echo ""
+echo "# Wi-Fi Pi Access Point and VPN Installation"
+echo "###################################################"
+echo " "
+sleep 3
 
 #### General Pi Setup
 #### TO BE DONE MANUALLY BEFORE RUNNING THIS SCRIPT!!!
@@ -82,33 +84,49 @@ echo ""
 #### After the reboot install and configure all necessary components
 #######################################################################
 
+clear
 echo "###############################################################"
 echo "IMPORTANT: The script requires you to change the Raspberry Pi"
-echo "default password as otherwise the setup is not secure."
+echo "           default password, otherwise the setup is not secure."
 echo "###############################################################"
-
+sleep 3
 passwd pi
 
-
-echo ""
+clear
+echo " "
 echo "#################################################################"
-echo " Updating all packages to the latest version and removing the"
-echo " Wolfram engine as it is not needed and requires huge udpates."
-echo " Also, tcpdump and htop are installed as they might be useful"
+echo " "
+echo " Updating all packages to the latest version and removing: "
+echo "   The Wolfram engine "
+echo "   The Sonic-Pi engine "
+echo "   The Scratch Software "
+echo "   The MineCraft-Pi Server "
+echo " Installing 'tcpdump' and 'htop' as they might be useful"
+echo " "
 echo "#################################################################"
+sleep 3
 
 apt-get update
-apt-get -y remove wolfram-engine
+apt-get remove --purge -y wolfram-engine
+apt-get remove --purge -y sonic-pi
+apt-get remove --purge -y scratch
+#apt-get remove --purge -y squak-vm # (if installed)
+#apt-get remove --purge -y squeak-plugins-scratch
+#apt-get remove --purge -y dillo
+#apt-get remove --purge -y penguinspuzzle
+apt-get remove --purge -y minecraft-pi
+
 apt-get -y install htop tcpdump
 apt-get -y upgrade
 apt-get -y install rpi-update
 rpi-update
 
+clear
 echo ""
 echo "###############################################################"
-echo "#### Unpacking configuration files"
+echo "# Unpacking configuration files"
 echo "###############################################################"
-
+sleep 3
 tar xvzf wifipi.tar
 
 #per default all configuration files are read only except for the owner
